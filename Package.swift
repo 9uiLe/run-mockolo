@@ -5,14 +5,14 @@ import PackageDescription
 let package = Package(
     name: "run-mockolo",
     products: [
-        .plugin(name: "Core", targets: ["Core"])
+        .plugin(name: "RunMockolo", targets: ["RunMockolo"])
     ],
     dependencies: [
         .package(url: "https://github.com/uber/mockolo", exact: "2.4.0")
     ],
     targets: [
         .plugin(
-            name: "Core",
+            name: "RunMockolo",
             capability: .buildTool(),
             dependencies: [.target(name: "mockolo")]
         ),
