@@ -5,7 +5,7 @@ enum RunMockoloError: Error {
 }
 
 extension RunMockoloError: LocalizedError {
-    var errorDescription: String {
+    var errorDescription: String? {
         switch self {
         case let .invalidURL(urlString):
             "Invalid URL: \(urlString)"
